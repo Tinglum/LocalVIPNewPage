@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(python -m http.server:*)",
+      "WebFetch(domain:localvip.com)",
+      "WebFetch(domain:helpateacherout.org)",
+      "Bash(dir \"C:\\\\Users\\\\kenne\\\\Downloads\\\\LocalVIPNewPage\\\\World''s Most Generous Cashback App -_files\"\" /b)",
+      "Bash(powershell -Command \"[System.IO.File]::ReadAllText\\(''C:\\\\Users\\\\kenne\\\\Downloads\\\\LocalVIPNewPage\\\\World''''s Most Generous Cashback App -_files\\\\iconAsset-22pay2b.svg''\\).Substring\\(0,2000\\)\")",
+      "Bash(powershell -Command \"[System.IO.File]::ReadAllText\\(''C:\\\\Users\\\\kenne\\\\Downloads\\\\LocalVIPNewPage\\\\World''''s Most Generous Cashback App -_files\\\\iconAsset-22pay2b.svg''\\).Substring\\(4000,2000\\)\")",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

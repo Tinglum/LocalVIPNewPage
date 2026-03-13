@@ -551,7 +551,7 @@ img { max-width: 100%; display: block; height: auto; }
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  padding: clamp(5rem, 8vw, 8rem) 0 clamp(4rem, 6vw, 6rem);
+  padding: clamp(3.5rem, 6vw, 6rem) 0 clamp(3.5rem, 6vw, 5rem);
   overflow: hidden;
 }
 
@@ -571,7 +571,8 @@ img { max-width: 100%; display: block; height: auto; }
   display: grid;
   gap: 48px;
   align-items: center;
-  width: 100%;
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
 }
 @media (min-width: 960px) {
   .hero__inner {
@@ -587,6 +588,10 @@ img { max-width: 100%; display: block; height: auto; }
   text-transform: uppercase;
   color: var(--blue);
   margin: 0 0 16px;
+}
+
+.hero__content {
+  align-self: start;
 }
 
 .hero__headline {
@@ -2111,81 +2116,6 @@ img { max-width: 100%; display: block; height: auto; }
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__head text-center">
-          <p class="section-label">About</p>
-          <h2 class="section-title">We Are LocalVIP</h2>
-        </div>
-
-        <div class="stakeholder">
-          <div class="stakeholder__content">
-            <div class="feature-card__icon">
-              <img src="World's Most Generous Cashback App -_files/location_info.svg" alt="" />
-            </div>
-            <p>We believe every local purchase should mean more. LocalVIP is a free mobile app that helps you save money at top-rated businesses, support the causes you care about, and earn bonus rewards for sharing with friends.</p>
-            <p>Launched by a small team of entrepreneurs and community leaders, LocalVIP connects consumers, businesses, schools, and charities in one powerful loop. It’s more than just cashback — it’s a movement to grow local economies through everyday spending.</p>
-            <p>From coffee shops to gyms, LocalVIP helps local heroes like you make an impact, one transaction at a time.</p>
-            <p>&#128241; <strong>Download the app and start making a difference today:</strong></p>
-          </div>
-          <div class="stakeholder__visual">
-            <img src="World's Most Generous Cashback App -_files/openart-image_vV4uGe4g_1748261257136_raw.jpeg" alt="Local community illustration" class="stakeholder__img" loading="lazy" />
-          </div>
-        </div>
-
-        <div class="content-block">
-          <h3>the mission</h3>
-          <div class="feature-card__icon">
-            <img src="World's Most Generous Cashback App -_files/feature_2.svg" alt="" />
-          </div>
-          <p>To make everyday spending meaningful. LocalVIP empowers individuals to support small businesses and local fundraising through simple, everyday actions. By using the app to pay for meals, massages, fitness classes or haircuts, users automatically direct a portion of every transaction to schools and charities they choose.</p>
-          <p>We’re on a mission to put purpose behind every purchase — helping communities grow stronger through generosity and connection.</p>
-        </div>
-
-        <div class="content-block">
-          <h3>The Vision</h3>
-          <div class="feature-card__icon">
-            <img src="World's Most Generous Cashback App -_files/feature_4.svg" alt="" />
-          </div>
-          <p>We envision a world where supporting your favorite local restaurant also means funding a classroom. Where shopping locally becomes the most rewarding way to give back. And where everyday people — not just big brands — drive change by using a smarter, more generous payment platform.</p>
-          <p>Our goal is to make LocalVIP available in every city, empowering millions of users to do good while living their lives.</p>
-        </div>
-
-        <div class="content-block">
-          <h3>Meet the founders</h3>
-          <div class="feature-card__icon">
-            <img src="World's Most Generous Cashback App -_files/contact_info.svg" alt="" />
-          </div>
-          <ul class="content-list">
-            <li>Rick Swanson — Founder &amp; CEO</li>
-            <li>Dominic Jenkins — Co-Founder &amp; CTO</li>
-            <li>Kenneth Tinglum — Co-Founder &amp; COO</li>
-          </ul>
-        </div>
-
-        <div class="content-block">
-          <h3>Where We Operate</h3>
-          <div class="feature-card__icon">
-            <img src="World's Most Generous Cashback App -_files/location_info.svg" alt="" />
-          </div>
-          <p>LocalVIP is built by a global team of entrepreneurs, creatives, and community leaders working across time zones with one shared goal: to make everyday spending meaningful.</p>
-          <p>We’re fully remote and proudly local everywhere — working with partners, businesses, and schools across the U.S. and beyond. Wherever you live, shop, or support a cause, LocalVIP is here to help you turn everyday purchases into real community impact.</p>
-        </div>
-
-        <div class="content-block">
-          <h3>Want to Launch LocalVIP in Your City?</h3>
-          <div class="feature-card__icon">
-            <img src="World's Most Generous Cashback App -_files/featuresAsset-23sendrecive_a.svg" alt="" />
-          </div>
-          <p>We’re building a nationwide network of local champions who care about supporting small businesses, helping schools and charities, and making their communities thrive.</p>
-          <p>If you’re someone who connects people, loves where you live, and wants to build something that truly makes a difference — we’d love to talk.</p>
-          <p><strong>Become a Launch Team Partner</strong><br />Help bring LocalVIP to your city and get rewarded as you grow your network, onboard local businesses, and create lasting impact.</p>
-          <p>&#128233; <a href="https://localvip.com/get-involved/">Apply here</a> or contact us to learn more about becoming a Launch Team Partner.</p>
-        </div>
-      </div>
-    </section>
-
     </div>
 
     <div class="page" data-page="about" hidden>
@@ -2193,21 +2123,21 @@ img { max-width: 100%; display: block; height: auto; }
         <div class="container page-hero__layout">
           <div>
             <p class="section-label">About LocalVIP</p>
-            <h1 class="page-title">We Are LocalVIP</h1>
-            <p class="page-sub">We believe every local purchase should mean more. LocalVIP is a free mobile app that helps you save money at top-rated businesses, support the causes you care about, and earn bonus rewards for sharing with friends.</p>
+            <h1 class="page-title">A community movement you can use every day.</h1>
+            <p class="page-sub">LocalVIP turns everyday purchases into cash back for you and automatic support for the schools and causes you care about — all while helping local businesses thrive.</p>
             <div class="page-hero__actions">
               <a href="/#join" class="btn btn--primary" data-scroll="join">Get Early Access</a>
-              <a href="/business" class="btn btn--outline" data-route="business">For Businesses</a>
+              <a href="/business" class="btn btn--outline" data-route="business">Partner with LocalVIP</a>
             </div>
             <div class="page-metrics">
-              <div class="page-metric"><strong>Mission</strong><span>Put purpose behind every purchase</span></div>
-              <div class="page-metric"><strong>Vision</strong><span>Make local giving automatic</span></div>
-              <div class="page-metric"><strong>Community</strong><span>Businesses, schools, shoppers</span></div>
+              <div class="page-metric"><strong>10%</strong><span>Only after a sale</span></div>
+              <div class="page-metric"><strong>2%</strong><span>Giveback on every purchase</span></div>
+              <div class="page-metric"><strong>10</strong><span>Referral levels of rewards</span></div>
             </div>
           </div>
           <div class="page-hero__visual">
-            <img src="World's Most Generous Cashback App -_files/openart-image_vV4uGe4g_1748261257136_raw.jpeg" alt="Local community illustration" />
-            <div class="page-hero__card">More than just cashback — a movement to grow local economies through everyday spending.</div>
+            <img src="World's Most Generous Cashback App -_files/Payment-app-hero-img-4.svg" alt="" />
+            <div class="page-hero__card">More than cashback — a loop that keeps local dollars local.</div>
           </div>
         </div>
       </section>
@@ -2216,16 +2146,36 @@ img { max-width: 100%; display: block; height: auto; }
         <div class="container stakeholder">
           <div class="stakeholder__content">
             <p class="section-label section-label--green">Our Story</p>
-            <h2 class="section-title">Built by community leaders</h2>
-            <p>Launched by a small team of entrepreneurs and community leaders, LocalVIP connects consumers, businesses, schools, and charities in one powerful loop. It’s more than just cashback — it’s a movement to grow local economies through everyday spending.</p>
-            <p>From coffee shops to gyms, LocalVIP helps local heroes like you make an impact, one transaction at a time.</p>
+            <h2 class="section-title">Built by people who love their cities.</h2>
+            <p>LocalVIP was created by entrepreneurs and community leaders who wanted to make local spending feel personal again — rewarding families, powering small businesses, and funding schools and causes at the same time.</p>
+            <p>From coffee shops to gyms, LocalVIP helps local heroes make an impact, one transaction at a time.</p>
+            <ul class="check-list">
+              <li>
+                <span class="check check--green" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M6.2 11.3 3 8.1l1.4-1.4 1.8 1.8 5.4-5.4 1.4 1.4z"/></svg>
+                </span>
+                Every purchase supports your chosen school or cause.
+              </li>
+              <li>
+                <span class="check check--green" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M6.2 11.3 3 8.1l1.4-1.4 1.8 1.8 5.4-5.4 1.4 1.4z"/></svg>
+                </span>
+                Businesses pay only after a real customer pays.
+              </li>
+              <li>
+                <span class="check check--green" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M6.2 11.3 3 8.1l1.4-1.4 1.8 1.8 5.4-5.4 1.4 1.4z"/></svg>
+                </span>
+                Shoppers earn cash back and bonus rewards automatically.
+              </li>
+            </ul>
             <p>&#128241; <strong>Download the app and start making a difference today:</strong></p>
             <div>
               <img src="World's Most Generous Cashback App -_files/google-play-and-apple-app-store-png-e1744890953514.jpeg" alt="Download on the App Store and Google Play" loading="lazy" width="240" />
             </div>
           </div>
           <div class="stakeholder__visual">
-            <img src="World's Most Generous Cashback App -_files/featuresAsset-24collecting-money-B.svg" alt="" class="stakeholder__img" loading="lazy" />
+            <img src="World's Most Generous Cashback App -_files/openart-image_vV4uGe4g_1748261257136_raw.jpeg" alt="Local community illustration" class="stakeholder__img" loading="lazy" />
           </div>
         </div>
       </section>
@@ -2234,7 +2184,8 @@ img { max-width: 100%; display: block; height: auto; }
         <div class="container">
           <div class="section__head text-center">
             <p class="section-label">Mission &amp; Vision</p>
-            <h2 class="section-title">Purpose behind every purchase</h2>
+            <h2 class="section-title">Purpose behind every purchase.</h2>
+            <p class="section-sub">LocalVIP is built to make generosity effortless, measurable, and local.</p>
           </div>
 
           <div class="panel-grid">
@@ -2258,27 +2209,56 @@ img { max-width: 100%; display: block; height: auto; }
 
             <div class="panel">
               <div class="panel__icon">
-                <img src="World's Most Generous Cashback App -_files/location_info.svg" alt="" />
+                <img src="World's Most Generous Cashback App -_files/feature_3.svg" alt="" />
               </div>
-              <h3 class="panel__title">Where We Operate</h3>
-              <p>LocalVIP is built by a global team of entrepreneurs, creatives, and community leaders working across time zones with one shared goal: to make everyday spending meaningful.</p>
-              <p>We’re fully remote and proudly local everywhere — working with partners, businesses, and schools across the U.S. and beyond.</p>
+              <h3 class="panel__title">Generosity Wins</h3>
+              <p>We believe local dollars should stay local. That’s why every purchase supports a school or charity and fuels neighborhood growth.</p>
             </div>
 
             <div class="panel">
               <div class="panel__icon">
-                <img src="World's Most Generous Cashback App -_files/featuresAsset-23sendrecive_a.svg" alt="" />
+                <img src="World's Most Generous Cashback App -_files/location_info.svg" alt="" />
               </div>
-              <h3 class="panel__title">Launch LocalVIP in Your City</h3>
-              <p>We’re building a nationwide network of local champions who care about supporting small businesses, helping schools and charities, and making their communities thrive.</p>
-              <p><strong>Become a Launch Team Partner</strong><br />Help bring LocalVIP to your city and get rewarded as you grow your network, onboard local businesses, and create lasting impact.</p>
-              <p>&#128233; <a href="https://localvip.com/get-involved/">Apply here</a> to become a Launch Team Partner.</p>
+              <h3 class="panel__title">Local First</h3>
+              <p>LocalVIP is built by a global team, but everything we do is focused on neighborhoods, schools, and small businesses in your city.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section class="section">
+        <div class="container">
+          <div class="section__head text-center">
+            <p class="section-label">How It Works</p>
+            <h2 class="section-title">A simple loop that lifts everyone.</h2>
+          </div>
+          <div class="step-grid">
+            <div class="step-card">
+              <div class="feature-card__icon">
+                <img src="World's Most Generous Cashback App -_files/iconAsset-21tap2.svg" alt="" />
+              </div>
+              <h3>Businesses Offer</h3>
+              <p>Local businesses set VIP offers and only pay after a customer pays.</p>
+            </div>
+            <div class="step-card">
+              <div class="feature-card__icon">
+                <img src="World's Most Generous Cashback App -_files/iconAsset-22pay2a.svg" alt="" />
+              </div>
+              <h3>Shoppers Save</h3>
+              <p>Families earn instant cash back and bonus rewards with every purchase.</p>
+            </div>
+            <div class="step-card">
+              <div class="feature-card__icon">
+                <img src="World's Most Generous Cashback App -_files/iconAsset-23go.svg" alt="" />
+              </div>
+              <h3>Causes Win</h3>
+              <p>2% of every payment goes to the school or charity you choose.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--warm">
         <div class="container">
           <div class="section__head text-center">
             <p class="section-label">Founders</p>
@@ -2296,16 +2276,34 @@ img { max-width: 100%; display: block; height: auto; }
               <div class="panel__icon">
                 <img src="World's Most Generous Cashback App -_files/contact_info.svg" alt="" />
               </div>
-              <h3 class="panel__title">Dominic Jenkins</h3>
-              <p>Co-Founder &amp; CTO</p>
-            </div>
-            <div class="panel">
-              <div class="panel__icon">
-                <img src="World's Most Generous Cashback App -_files/contact_info.svg" alt="" />
-              </div>
               <h3 class="panel__title">Kenneth Tinglum</h3>
               <p>Co-Founder &amp; COO</p>
             </div>
+            <div class="panel">
+              <div class="panel__icon">
+                <img src="World's Most Generous Cashback App -_files/featuresAsset-24collecting-money-C.svg" alt="" />
+              </div>
+              <h3 class="panel__title">Community Team</h3>
+              <p>A growing network of local leaders, builders, and partners bringing LocalVIP to new cities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container stakeholder">
+          <div class="stakeholder__content">
+            <p class="section-label section-label--blue">Launch Team</p>
+            <h2 class="section-title">Bring LocalVIP to your city.</h2>
+            <p>We’re building a nationwide network of local champions who care about supporting small businesses, helping schools and charities, and making their communities thrive.</p>
+            <p><strong>Become a Launch Team Partner</strong> and get rewarded as you grow your network, onboard local businesses, and create lasting impact.</p>
+            <div class="page-hero__actions">
+              <a href="https://localvip.com/get-involved/" class="btn btn--primary" target="_blank" rel="noopener">Apply Here</a>
+              <a href="/causes" class="btn btn--outline" data-route="causes">Support a School or Cause</a>
+            </div>
+          </div>
+          <div class="stakeholder__visual">
+            <img src="World's Most Generous Cashback App -_files/featuresAsset-23sendrecive_a.svg" alt="" class="stakeholder__img" loading="lazy" />
           </div>
         </div>
       </section>
@@ -3030,7 +3028,7 @@ img { max-width: 100%; display: block; height: auto; }
 <p data-start="1151" data-end="1246" class="">All associated referral tools, campaigns, features, and services (collectively, the “Services”)</p>
 </li>
 </ul>
-<p>By using any part of the Services, you agree to be bound by these Terms and our <a href="/policy#privacy" data-route="policy">Privacy Policy</a>. If you do not agree, do not use the Services.</p>
+<p>By using any part of the Services, you agree to be bound by these Terms and our <a href="/policy#privacy" data-route="policy" data-anchor="true">Privacy Policy</a>. If you do not agree, do not use the Services.</p>
 
 <hr>
 
@@ -3415,7 +3413,7 @@ img { max-width: 100%; display: block; height: auto; }
             <p class="page-sub">You set the deal. We do the marketing. You only pay 10% after the sale. No ad spend. No credit card fees. Just new paying customers — when you need them.</p>
             <div class="page-hero__actions">
               <a href="/#join" class="btn btn--primary" data-scroll="join">Get Early Access</a>
-              <a href="/business#business-how" class="btn btn--outline" data-route="business">How It Works</a>
+              <a href="/business#business-overview" class="btn btn--outline" data-route="business" data-anchor="true">Read More</a>
             </div>
             <div class="page-metrics">
               <div class="page-metric"><strong>10%</strong><span>Only after a sale</span></div>
@@ -3435,7 +3433,7 @@ img { max-width: 100%; display: block; height: auto; }
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="business-overview">
         <div class="container">
           <div class="section__head text-center">
             <p class="section-label">Performance Marketing</p>
@@ -3605,7 +3603,7 @@ img { max-width: 100%; display: block; height: auto; }
             <p class="page-sub">Every time you shop with LocalVIP, 2% of your payment goes to the school, team, or charity of your choice — no extra steps. You choose your cause once in the app, and it keeps giving with every purchase you make.</p>
             <div class="page-hero__actions">
               <a href="/#join" class="btn btn--primary" data-scroll="join">Get Early Access</a>
-              <a href="/causes#causes-how" class="btn btn--outline" data-route="causes">How It Works</a>
+              <a href="/causes#causes-overview" class="btn btn--outline" data-route="causes" data-anchor="true">Read More</a>
             </div>
             <div class="page-metrics">
               <div class="page-metric"><strong>2%</strong><span>Automatic giveback</span></div>
@@ -3625,7 +3623,7 @@ img { max-width: 100%; display: block; height: auto; }
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="causes-overview">
         <div class="container">
           <div class="section__head text-center">
             <p class="section-label">Why Causes Love LocalVIP</p>
@@ -3710,7 +3708,7 @@ img { max-width: 100%; display: block; height: auto; }
             <p class="page-sub">LocalVIP helps you find the best deals at top-rated local businesses while sending a portion of every purchase to a school or cause you care about. Download the app now — and start making a difference!</p>
             <div class="page-hero__actions">
               <a href="/#join" class="btn btn--primary" data-scroll="join">Get Early Access</a>
-              <a href="/shoppers#shoppers-how" class="btn btn--outline" data-route="shoppers">How It Works</a>
+              <a href="/shoppers#shoppers-overview" class="btn btn--outline" data-route="shoppers" data-anchor="true">Read More</a>
             </div>
             <div class="page-metrics">
               <div class="page-metric"><strong>Instant</strong><span>Cash back rewards</span></div>
@@ -3730,7 +3728,7 @@ img { max-width: 100%; display: block; height: auto; }
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="shoppers-overview">
         <div class="container">
           <div class="section__head text-center">
             <p class="section-label">Rewards Built for You</p>
@@ -3836,9 +3834,9 @@ img { max-width: 100%; display: block; height: auto; }
             <li><a href="/#how" data-scroll="how">How It Works</a></li>
             <li><a href="/#benefits" data-scroll="benefits">Why It Works</a></li>
             <li><a href="/#faq" data-scroll="faq">FAQ</a></li>
-            <li><a href="/about" data-route="about">About LocalVIP</a></li>
-            <li><a href="/policy#privacy" data-route="policy">Privacy Policy</a></li>
-            <li><a href="/policy#terms" data-route="policy">Terms of Service</a></li>
+            <li><a href="/about" data-route="about">About</a></li>
+            <li><a href="/policy#privacy" data-route="policy" data-anchor="true">Privacy Policy</a></li>
+            <li><a href="/policy#terms" data-route="policy" data-anchor="true">Terms of Service</a></li>
           </ul>
         </div>
 
@@ -3873,6 +3871,22 @@ img { max-width: 100%; display: block; height: auto; }
       const pages = Array.from(document.querySelectorAll("[data-page]"));
       const routeLinks = Array.from(document.querySelectorAll("[data-route]"));
       const scrollLinks = Array.from(document.querySelectorAll("[data-scroll]"));
+      const idPageMap = new Map();
+      const pagePathMap = {
+        home: "/",
+        business: "/business",
+        causes: "/causes",
+        shoppers: "/shoppers",
+        about: "/about",
+        policy: "/policy"
+      };
+
+      pages.forEach((page) => {
+        const pageName = page.getAttribute("data-page");
+        page.querySelectorAll("[id]").forEach((el) => {
+          idPageMap.set(el.id, pageName);
+        });
+      });
 
       const routeMap = {
         "/": "home",
@@ -3942,10 +3956,23 @@ img { max-width: 100%; display: block; height: auto; }
         }
       };
 
+      const resolvePage = (path, hash) => {
+        const pathPage = getPage(path);
+        if (!hash) {
+          return { page: pathPage, finalPath: path };
+        }
+        const targetId = hash.replace("#", "");
+        const hashPage = idPageMap.get(targetId);
+        if ((path === "/" || pathPage === "home") && hashPage) {
+          return { page: hashPage, finalPath: pagePathMap[hashPage] || path };
+        }
+        return { page: pathPage, finalPath: path };
+      };
+
       const navigate = (path, hash, replace) => {
-        const page = getPage(path);
+        const { page, finalPath } = resolvePage(path, hash);
         showPage(page, hash);
-        const url = path + (hash || "");
+        const url = finalPath + (hash || "");
         if (replace) {
           history.replaceState({}, "", url);
         } else {
@@ -3963,7 +3990,8 @@ img { max-width: 100%; display: block; height: auto; }
           event.preventDefault();
           const href = link.getAttribute("href") || "/";
           const url = new URL(href, window.location.origin);
-          navigate(url.pathname, url.hash, false);
+          const keepHash = link.hasAttribute("data-policy-tab") || link.hasAttribute("data-anchor");
+          navigate(url.pathname, keepHash ? url.hash : "", false);
         });
       });
 
@@ -3972,7 +4000,7 @@ img { max-width: 100%; display: block; height: auto; }
           event.preventDefault();
           const href = link.getAttribute("href") || "/";
           const url = new URL(href, window.location.origin);
-          navigate("/", url.hash, false);
+          navigate(url.pathname, url.hash, false);
         });
       });
 
